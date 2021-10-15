@@ -1,0 +1,51 @@
+#author {
+    font-size: 3px;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
+
+#header-wrapper{
+    text-align: center;
+    height: 40px;
+}
+#header-wrapper h2{
+    margin: 0;
+}
+#header-wrapper h4{
+    margin: 0;
+}
+
+#result-wrapper{
+    width: 100%;
+    height: calc(100% - 50px - 200px);
+    margin-top: 10px;
+}
+
+#stats-wrapper{
+    width: 280px;
+    margin-left: 10px;
+    
+    float: left;
+}
+.info-before{
+    display: inline-block;
+    width: 175px;
+}
+
+#controls-wrapper{
+    width: 210px;
+    
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+
+#setting-wrapper{
+    width: 240px;
+    float: right;
+}
+#setting-wrapper input[type=text]{
+    width: 225px;
+}

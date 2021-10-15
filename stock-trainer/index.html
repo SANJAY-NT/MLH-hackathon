@@ -1,0 +1,41 @@
+<html>
+    <head>
+        <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+        
+        <script src="showChart.js"></script>
+        <script src="getStockData.js"></script>
+        <script src="main.js"></script>
+        <link rel='stylesheet' type='text/css' href='main.css'>
+        <title>Stock Trainer</title>
+    </head>
+    <body style="margin: 0;">
+        <div id="header-wrapper">
+            <h2>Stock Trainer</h2>
+        </div>
+        <div id='result-wrapper'>
+            <canvas id="chart"></canvas>
+        </div>
+        <div id='stats-wrapper'>
+            <span class='info-before'>Current Status:</span> <span class='info-after'>Waiting for data</span><br><br>
+            <span class='info-before'>Amount of money earned:</span> <span class='info-after'></span><br>
+            <span class='info-before'>Amount of buy decisions:</span> <span class='info-after'></span><br>
+            <span class='info-before'>Amount of sell decisions:</span> <span class='info-after'></span><br>
+            <span class='info-before'>Amount of cheating sells:</span> <span class='info-after'></span><br>
+            <span class='info-before'>Amount of stock left:</span> <span class='info-after'></span><br><br>
+            <button id='actionButton' onclick='startstopAction()'>Start</button>
+        </div>
+        <div id='setting-wrapper'>
+            <input id='stock-symbol-input' type='text' placeholder='Stock symbol'><br>
+            <input id='limit-input' type='text' placeholder='Data limit (leave blank for all)'><br>
+            <input id='viewing-input' type='text' placeholder='Viewing limit (leave blank for 60 days)'><br>
+            <input id='move-boolean' type='checkbox'><label for='move-boolean'>Retain previous data on new day</label><br>
+            <button onclick='getDataClick(document.getElementById("stock-symbol-input").value, document.getElementById("limit-input").value)'>Get Data</button><br>
+        </div>
+        <div id='controls-wrapper'>
+            <button onclick='buyAction()'>Buy (1)</button>
+            <button onclick='sellAction()'>Sell (2)</button>
+            <button onclick='nextDayAction()'>Next day (3)</button>
+        </div>
+        <p id="author">Made by Simon Cheng</p>
+    </body>
+</html>
