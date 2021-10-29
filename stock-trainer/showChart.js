@@ -65,7 +65,6 @@ function generateChart(canvas, labels, stockData, buyDecision, sellDecision, noA
 }
 window.onload = function(){
     var chartDom = document.getElementById('chart');
-    
     // Dummy data for show
     window.mainChart = generateChart(chartDom, [1,2,3,4,5], [20, 60, 50, 99, 100], [2,3], [5]);
 };
