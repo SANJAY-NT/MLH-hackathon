@@ -81,5 +81,4 @@ class DOval extends DShape
 				    (int)model.getBound().getHeight());
 		super.draw(g);
 	}
-	
 }
